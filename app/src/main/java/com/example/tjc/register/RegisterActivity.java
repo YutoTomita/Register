@@ -1,5 +1,9 @@
 package com.example.tjc.register;
 
+/*
+伝票入力画面の動作
+ */
+
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.Context;
@@ -18,9 +22,13 @@ import android.widget.TextView;
 
 public class RegisterActivity extends AppCompatActivity {
 
+    //データベースの名前
     private final static String DB_NAME = "sales.db";
+    //データベースのテーブル名
     private final static String DB_TABLE = "sales";
+    //データベースのバージョン(データベースの構造を変更した場合はここを変更)
     private final static int DB_VERSION = 1;
+    //SQLiteを使用
     private SQLiteDatabase db;
     private final String preName = "MAIN_SETTING";
     private final String dataIntPreTag = "dataIPT";
@@ -29,7 +37,8 @@ public class RegisterActivity extends AppCompatActivity {
     private int dataInt;
     private int position = 0;
     private int[] num = {0,0,0,0,0,0,0,0,0,0,0,0,0};
-    private int[] value = {200,300,100,100,150,100,100,150,100,100,150,100,150};//各メニューの価格
+    //各メニューの価格
+    private int[] value = {200,300,100,100,150,100,100,150,100,100,150,100,150};
     private int total = 0;
 
     @Override
@@ -40,8 +49,9 @@ public class RegisterActivity extends AppCompatActivity {
         db = dbHelper.getWritableDatabase();
 
         Context context = getApplicationContext();
+
+        //初回起動時にデータベースを作成し初期化する
         sharedPreferences = getSharedPreferences(preName, MODE_PRIVATE);
-        ;
         dataInt = sharedPreferences.getInt(dataIntPreTag, 0);
         edit = sharedPreferences.edit();
         if (dataInt == 0) {
@@ -70,8 +80,9 @@ public class RegisterActivity extends AppCompatActivity {
             CustomToast.makeText(context, "初期化に成功しました", 500).show();
             dataInt++;
             edit.putInt(dataIntPreTag, dataInt).apply();
-        } else {
-        }
+        } else { }
+
+        //ラジオボタンによる選択を取得する
         // idがgroupのRadioGroupを取得
         RadioGroup radioGroup = (RadioGroup) findViewById(R.id.RadioGroup);
         // radioGroupの選択値が変更された時の処理を設定
@@ -124,14 +135,20 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
+    /*
+    * 会計ボタンを押したときの挙動
+    * */
     public void register(View view){
-        // 確認ダイアログの作成
+        // 確認ダイアログの作成,表示
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(RegisterActivity.this);
         alertDialog.setTitle("確認");
         alertDialog.setMessage("数量は伝票と一致していますか？");
+
+        //OKを押した場合
         alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                //データベースに売り上げを記入(上書き)
                 Cursor cursor = db.query(DB_TABLE, null, null, null, null, null, null);
                 cursor.moveToFirst();
                 int[] database = new int[14];
@@ -152,8 +169,10 @@ public class RegisterActivity extends AppCompatActivity {
                 values.put("ColaL", num[12] + database[12]);
                 values.put("Registernum", database[13] + 1);
 
+                //売上データをデータベースに保存,保存したことがなければ行を追加する
                 int colnum = db.update(DB_TABLE, values, null, null);
                 if(colnum == 0)db.insert(DB_TABLE, String.valueOf(0), values);
+
                 Context context = getApplicationContext();
                 CustomToast.makeText(context , "保存に成功しました", 500).show();
                 Intent intent = new Intent(getApplication(), CaliculateActivity.class);
