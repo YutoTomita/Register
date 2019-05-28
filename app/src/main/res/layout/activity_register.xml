@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--会計表示部分-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="￥   "
+                    android:textSize="40dp" />
+
+                <TextView
+                    android:id="@+id/Total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="40dp" />
+
+            </LinearLayout>
+
+            <!--会計表示部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/register"
+                    android:layout_width="0dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:onClick="register"
+                    android:text="会計" />
+
+                <Button
+                    android:id="@+id/clear"
+                    android:layout_width="0dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:onClick="clear"
+                    android:text="クリア" />
+
+                <Button
+                    android:id="@+id/confirmSales"
+                    android:layout_width="0dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:onClick="sales"
+                    android:text="売上表示" />
+
+            </LinearLayout>
+
+            <!--増減ボタン部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/minus"
+                    android:layout_width="0dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:onClick="minus"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/plus"
+                    android:layout_width="0dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:onClick="plus"
+                    android:text="+" />
+
+            </LinearLayout>
+
+            <!--メニュー部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <!--ラジオボタン-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RadioGroup
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/RadioGroup">
+
+                        <RadioButton
+                            android:id="@+id/menu1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ホットケーキ"
+                            android:textSize="30dp"/>
+
+                        <RadioButton
+                            android:id="@+id/menu2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wホットケーキ"
+                            android:textSize="30dp"/>
+
+                        <RadioButton
+                            android:id="@+id/menu3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ホットコーヒー"
+                            android:textSize="30dp"/>
+
+                        <RadioButton
+                            android:id="@+id/menu4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="アイスコーヒーS"
+                            android:textSize="30dp"/>
+
+                        <RadioButton
+                            android:id="@+id/menu5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="アイスコーヒーL"
+                            android:textSize="30dp"/>
+
+                        <RadioButton
+                            android:id="@+id/menu6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ホットティー"
+                            android:textSize="30dp"/>
+
+                        <RadioButton
+                            android:id="@+id/menu7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="アイスティーS"
+                            android:textSize="30dp"/>
+
+                        <RadioButton
+                            android:id="@+id/menu8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="アイスティーL"
+                            android:textSize="30dp"/>
+
+                        <RadioButton
+                            android:id="@+id/menu9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="緑茶"
+                            android:textSize="30dp"/>
+
+                        <RadioButton
+                            android:id="@+id/menu10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="オレンジS"
+                            android:textSize="30dp"/>
+
+                        <RadioButton
+                            android:id="@+id/menu11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="オレンジL"
+                            android:textSize="30dp"/>
+
+                        <RadioButton
+                            android:id="@+id/menu12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="コーラS"
+                            android:textSize="30dp"/>
+
+                        <RadioButton
+                            android:id="@+id/menu13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="コーラL"
+                            android:textSize="30dp"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!--×-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="×"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="×"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="×"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="×"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="×"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="×"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="×"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="×"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="×"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="×"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="×"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="×"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="×"
+                        android:textSize="30dp" />
+
+                </LinearLayout>
+
+                <!--数-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/num1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/num2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/num3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/num4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/num5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/num6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/num7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/num8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/num9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/num10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/num11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/num12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/num13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="30dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
