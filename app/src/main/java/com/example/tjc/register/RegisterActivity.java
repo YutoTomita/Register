@@ -339,7 +339,7 @@ public class RegisterActivity extends AppCompatActivity {
             db.execSQL("create table if not exists " + DB_TABLE + "(" +
                     "HotCake integer,WHotCake integer,HotCoffee integer,IceCoffeeS integer,IceCoffeeL integer," +
                     "HotTea integer,IceTeaS integer,IceTeaL integer,HotGreenTea integer,OrangeS integer," +
-                    "OrangeL integer,ColaS integer,ColaL integer,Registernum integer,Engineerstunum integer)");
+                    "OrangeL integer,ColaS integer,ColaL integer,Registernum integer,Engineerstunum integer,DiscountTicket integer)");
         }
 
         @Override

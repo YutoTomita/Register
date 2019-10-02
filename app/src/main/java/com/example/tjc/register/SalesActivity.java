@@ -22,7 +22,7 @@ public class SalesActivity extends AppCompatActivity {
     private final static  String DB_TABLE = "sales";
     private SQLiteDatabase db;
     private final static int DB_VERSION = 1;
-    int[] sales = new int[15];
+    int[] sales = new int[16];
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
