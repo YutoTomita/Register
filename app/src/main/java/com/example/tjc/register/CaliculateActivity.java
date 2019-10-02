@@ -19,9 +19,10 @@ public class CaliculateActivity extends AppCompatActivity {
     private final static  String DB_TABLE = "sales";
     private SQLiteDatabase db;
     private final static int DB_VERSION = 1;
-    private int engineerstunum = 0;
+    private int engineerstunum = 0, discountticket = 0;
     int total = 0;
     int engineer = 0;
+    int discount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class CaliculateActivity extends AppCompatActivity {
         Cursor cursor = db.query(DB_TABLE, null, null, null, null, null, null);
         cursor.moveToFirst();
         engineerstunum = cursor.getInt(14);
+        discountticket = cursor.getInt(15);
         TextView showtotal = (TextView)findViewById(R.id.Total);
         showtotal.setText(Integer.toString(total));
     }
@@ -61,6 +63,7 @@ public class CaliculateActivity extends AppCompatActivity {
 
                 ContentValues values = new ContentValues();
                 values.put("Engineerstunum", engineer + engineerstunum);
+                values.put("DiscountTicket", discount + discountticket);
 
                 int colnum = db.update(DB_TABLE, values, null, null);
                 if (colnum == 0) db.insert(DB_TABLE, String.valueOf(0), values);
@@ -107,6 +110,36 @@ public class CaliculateActivity extends AppCompatActivity {
         showtotal.setText(Integer.toString(total));
     }
 
+    public void minus2(View view){
+        boolean decrease = false;
+        if(discount != 0){
+            discount--;
+            decrease = true;
+        }
+        TextView num = (TextView)findViewById(R.id.num1);
+        num.setText(Integer.toString(discount));
+        TextView showtotal = (TextView)findViewById(R.id.Total);
+        if(decrease)total += 50;
+        showtotal.setText(Integer.toString(total));
+    }
+
+    public void plus2(View view){
+        boolean increase = false;
+        if(total - 50 > 0){
+            discount++;
+            increase = true;
+        }
+        TextView num = (TextView)findViewById(R.id.num1);
+        num.setText(Integer.toString(discount));
+        TextView showtotal = (TextView)findViewById(R.id.Total);
+        if(increase)total -= 50;
+        else {
+            Context context = getApplicationContext();
+            CustomToast.makeText(context, "会計額をマイナスにすることは出来ません", 1000).show();
+        }
+        showtotal.setText(Integer.toString(total));
+    }
+
     public static class DBHelper extends SQLiteOpenHelper {
 
         public DBHelper(Context context) {
@@ -119,7 +152,7 @@ public class CaliculateActivity extends AppCompatActivity {
             db.execSQL("create table if not exists " + DB_TABLE + "(" +
                     "HotCake integer,WHotCake integer,HotCoffee integer,IceCoffeeS integer,IceCoffeeL integer," +
                     "HotTea integer,IceTeaS integer,IceTeaL integer,HotGreenTea integer,OrangeS integer," +
-                    "OrangeL integer,ColaS integer,ColaL integer,Registernum integer,Engineerstunum integer)");
+                    "OrangeL integer,ColaS integer,ColaL integer,Registernum integer,Engineerstunum integer,DiscountTicket integer)");
         }
 
         @Override

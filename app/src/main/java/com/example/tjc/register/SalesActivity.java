@@ -32,7 +32,7 @@ public class SalesActivity extends AppCompatActivity {
         TextView[] textViews = {(TextView)findViewById(R.id.textView),(TextView)findViewById(R.id.textView2),(TextView)findViewById(R.id.textView3),(TextView)findViewById(R.id.textView4),
                 (TextView)findViewById(R.id.textView5),(TextView)findViewById(R.id.textView6),(TextView)findViewById(R.id.textView7),(TextView)findViewById(R.id.textView8),(TextView)findViewById(R.id.textView9),
                 (TextView)findViewById(R.id.textView10),(TextView)findViewById(R.id.textView11),(TextView)findViewById(R.id.textView12),(TextView)findViewById(R.id.textView13),
-                (TextView)findViewById(R.id.customer),(TextView)findViewById(R.id.engineer)};
+                (TextView)findViewById(R.id.customer),(TextView)findViewById(R.id.engineer),(TextView)findViewById(R.id.discount)};
 
         //売り上げデータベースを読み込み
         RegisterActivity.DBHelper dbHelper = new RegisterActivity.DBHelper(this);
@@ -79,6 +79,7 @@ public class SalesActivity extends AppCompatActivity {
                 values.put("ColaL", 0);
                 values.put("Registernum", 0);
                 values.put("Engineerstunum", 0);
+                values.put("DiscountTicket", 0);
 
                 int colnum = db.update(DB_TABLE, values, null, null);
                 if(colnum == 0)db.insert(DB_TABLE, String.valueOf(0), values);
