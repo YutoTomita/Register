@@ -18,7 +18,7 @@ public class CaliculateActivity extends AppCompatActivity {
     private final static String DB_NAME = "sales.db";
     private final static  String DB_TABLE = "sales";
     private SQLiteDatabase db;
-    private final static int DB_VERSION = 1;
+    private final static int DB_VERSION = 2;
     private int engineerstunum = 0, discountticket = 0;
     int total = 0;
     int engineer = 0;
@@ -36,8 +36,8 @@ public class CaliculateActivity extends AppCompatActivity {
         if (extras != null) total = extras.getInt("total");
         Cursor cursor = db.query(DB_TABLE, null, null, null, null, null, null);
         cursor.moveToFirst();
-        engineerstunum = cursor.getInt(14);
-        discountticket = cursor.getInt(15);
+        engineerstunum = cursor.getInt(12);
+        discountticket = cursor.getInt(13);
         TextView showtotal = (TextView)findViewById(R.id.Total);
         showtotal.setText(Integer.toString(total));
     }
@@ -150,9 +150,9 @@ public class CaliculateActivity extends AppCompatActivity {
         @Override
         public void onCreate(SQLiteDatabase db) {
             db.execSQL("create table if not exists " + DB_TABLE + "(" +
-                    "HotCake integer,WHotCake integer,HotCoffee integer,IceCoffeeS integer,IceCoffeeL integer," +
-                    "HotTea integer,IceTeaS integer,IceTeaL integer,HotGreenTea integer,OrangeS integer," +
-                    "OrangeL integer,ColaS integer,ColaL integer,Registernum integer,Engineerstunum integer,DiscountTicket integer)");
+                    "Hotdog integer,Tuna integer,Egg integer,Peach integer,Orange integer," +
+                    "ChocoBanana integer,HotCoffee integer,IceCoffee integer,Milktea integer,Cola integer," +
+                    "Calpis integer,Registernum integer,Engineerstunum integer,DiscountTicket integer)");
         }
 
         @Override

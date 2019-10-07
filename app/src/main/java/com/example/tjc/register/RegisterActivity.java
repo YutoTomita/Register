@@ -27,7 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
     //データベースのテーブル名
     private final static String DB_TABLE = "sales";
     //データベースのバージョン(データベースの構造を変更した場合はここを変更)
-    private final static int DB_VERSION = 1;
+    private final static int DB_VERSION = 2;
     //SQLiteを使用
     private SQLiteDatabase db;
     private final String preName = "MAIN_SETTING";
@@ -36,9 +36,9 @@ public class RegisterActivity extends AppCompatActivity {
     private SharedPreferences.Editor edit;
     private int dataInt;
     private int position = 0;
-    private int[] num = {0,0,0,0,0,0,0,0,0,0,0,0,0};
+    private int[] num = {0,0,0,0,0,0,0,0,0,0,0};
     //各メニューの価格
-    private int[] value = {200,300,100,100,150,100,100,150,100,100,150,100,150};
+    private int[] value = {250,200,200,200,200,200,100,100,100,100,100};
     private int total = 0;
 
     @Override
@@ -58,19 +58,17 @@ public class RegisterActivity extends AppCompatActivity {
             CustomToast.makeText(context, "初回起動です", 500).show();
             CustomToast.makeText(context, "売り上げデータを初期化します", 500).show();
             ContentValues values = new ContentValues();
-            values.put("HotCake", 0);
-            values.put("WHotCake", 0);
+            values.put("Hotdog", 0);
+            values.put("Tuna", 0);
+            values.put("Egg", 0);
+            values.put("Peach", 0);
+            values.put("Orange", 0);
+            values.put("ChocoBanana", 0);
             values.put("HotCoffee", 0);
-            values.put("IceCoffeeS", 0);
-            values.put("IceCoffeeL", 0);
-            values.put("HotTea", 0);
-            values.put("IceTeaS", 0);
-            values.put("IceTeaL", 0);
-            values.put("HotGreenTea", 0);
-            values.put("OrangeS", 0);
-            values.put("OrangeL", 0);
-            values.put("ColaS", 0);
-            values.put("ColaL", 0);
+            values.put("IceCoffee", 0);
+            values.put("Milktea", 0);
+            values.put("Cola", 0);
+            values.put("Calpis", 0);
             values.put("Registernum", 0);
             values.put("Engineerstunum", 0);
 
@@ -124,12 +122,6 @@ public class RegisterActivity extends AppCompatActivity {
                     case R.id.menu11:
                         position = 10;
                         break;
-                    case R.id.menu12:
-                        position = 11;
-                        break;
-                    case R.id.menu13:
-                        position = 12;
-                        break;
                 }
             }
         });
@@ -151,23 +143,21 @@ public class RegisterActivity extends AppCompatActivity {
                 //データベースに売り上げを記入(上書き)
                 Cursor cursor = db.query(DB_TABLE, null, null, null, null, null, null);
                 cursor.moveToFirst();
-                int[] database = new int[14];
+                int[] database = new int[12];
                 for(int i=0; i<database.length; i++)database[i] = cursor.getInt(i);
                 ContentValues values = new ContentValues();
-                values.put("HotCake", num[0] + database[0]);
-                values.put("WHotCake", num[1] + database[1]);
-                values.put("HotCoffee", num[2] + database[2]);
-                values.put("IceCoffeeS", num[3] + database[3]);
-                values.put("IceCoffeeL", num[4] + database[4]);
-                values.put("HotTea", num[5] + database[5]);
-                values.put("IceTeaS", num[6] + database[6]);
-                values.put("IceTeaL", num[7] + database[7]);
-                values.put("HotGreenTea", num[8] + database[8]);
-                values.put("OrangeS", num[9] + database[9]);
-                values.put("OrangeL", num[10] + database[10]);
-                values.put("ColaS", num[11] + database[11]);
-                values.put("ColaL", num[12] + database[12]);
-                values.put("Registernum", database[13] + 1);
+                values.put("Hotdog", num[0] + database[0]);
+                values.put("Tuna", num[1] + database[1]);
+                values.put("Egg", num[2] + database[2]);
+                values.put("Peach", num[3] + database[3]);
+                values.put("Orange", num[4] + database[4]);
+                values.put("ChocoBanana", num[5] + database[5]);
+                values.put("HotCoffee", num[6] + database[6]);
+                values.put("IceCoffee", num[7] + database[7]);
+                values.put("Milktea", num[8] + database[8]);
+                values.put("Cola", num[9] + database[9]);
+                values.put("Calpis", num[10] + database[10]);
+                values.put("Registernum", database[11] + 1);
 
                 //売上データをデータベースに保存,保存したことがなければ行を追加する
                 int colnum = db.update(DB_TABLE, values, null, null);
@@ -191,7 +181,7 @@ public class RegisterActivity extends AppCompatActivity {
     public void clear(View view){
         TextView[] textViews = {(TextView)findViewById(R.id.num1),(TextView)findViewById(R.id.num2),(TextView)findViewById(R.id.num3),(TextView)findViewById(R.id.num4),(TextView)findViewById(R.id.num5)
                 ,(TextView)findViewById(R.id.num6),(TextView)findViewById(R.id.num7),(TextView)findViewById(R.id.num8),(TextView)findViewById(R.id.num9),(TextView)findViewById(R.id.num10)
-                ,(TextView)findViewById(R.id.num11),(TextView)findViewById(R.id.num12),(TextView)findViewById(R.id.num13)};
+                ,(TextView)findViewById(R.id.num11)};
         for(int i=0;i<textViews.length;i++){
             num[i] = 0;
             textViews[i].setText(Integer.toString(num[i]));
@@ -245,12 +235,6 @@ public class RegisterActivity extends AppCompatActivity {
                 break;
             case 10:
                 textView = (TextView)findViewById(R.id.num11);
-                break;
-            case 11:
-                textView = (TextView)findViewById(R.id.num12);
-                break;
-            case 12:
-                textView = (TextView)findViewById(R.id.num13);
                 break;
             default:
                 textView = (TextView)findViewById(R.id.num1);
@@ -306,12 +290,6 @@ public class RegisterActivity extends AppCompatActivity {
             case 10:
                 textView = (TextView)findViewById(R.id.num11);
                 break;
-            case 11:
-                textView = (TextView)findViewById(R.id.num12);
-                break;
-            case 12:
-                textView = (TextView)findViewById(R.id.num13);
-                break;
             default:
                 textView = (TextView)findViewById(R.id.num1);
                 position = 0;
@@ -337,9 +315,9 @@ public class RegisterActivity extends AppCompatActivity {
         @Override
         public void onCreate(SQLiteDatabase db) {
             db.execSQL("create table if not exists " + DB_TABLE + "(" +
-                    "HotCake integer,WHotCake integer,HotCoffee integer,IceCoffeeS integer,IceCoffeeL integer," +
-                    "HotTea integer,IceTeaS integer,IceTeaL integer,HotGreenTea integer,OrangeS integer," +
-                    "OrangeL integer,ColaS integer,ColaL integer,Registernum integer,Engineerstunum integer,DiscountTicket integer)");
+                    "Hotdog integer,Tuna integer,Egg integer,Peach integer,Orange integer," +
+                    "ChocoBanana integer,HotCoffee integer,IceCoffee integer,Milktea integer,Cola integer," +
+                    "Calpis integer,Registernum integer,Engineerstunum integer,DiscountTicket integer)");
         }
 
         @Override

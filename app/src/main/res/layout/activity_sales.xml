@@ -133,13 +133,37 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:text="ホットケーキ"
+                        android:text="ホットドッグ"
                         android:textSize="15dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:text="Wホットケーキ"
+                        android:text="ツナサンド"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="たまごサンド"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="ピーチサンド"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="みかんサンド"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="チョコバナナサンド"
                         android:textSize="15dp" />
 
                     <TextView
@@ -151,62 +175,25 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:text="アイスコーヒー S"
+                        android:text="アイスコーヒー"
                         android:textSize="15dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:text="アイスコーヒー L"
+                        android:text="ミルクティー"
                         android:textSize="15dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:text="ホットティー"
+                        android:text="コーラ"
                         android:textSize="15dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:text="アイスティー S"
-                        android:textSize="15dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:text="アイスティー L"
-                        android:textSize="15dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:text="ホット緑茶"
-                        android:textSize="15dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:text="オレンジ S"
-                        android:textSize="15dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:text="オレンジ L"
-                        android:textSize="15dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:text="コーラ S"
-                        android:textSize="15dp" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:text="コーラ L"
+                        android:text="カルピス"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -300,22 +287,6 @@
                         android:text="0"
                         android:textSize="15dp" />
 
-
-                    <TextView
-                        android:id="@+id/textView12"
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:text="0"
-                        android:textSize="15dp" />
-
-
-                    <TextView
-                        android:id="@+id/textView13"
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:text="0"
-                        android:textSize="15dp" />
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -339,37 +310,25 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:text="杯"
+                        android:text="食"
                         android:textSize="15dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:text="杯"
+                        android:text="食"
                         android:textSize="15dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:text="杯"
+                        android:text="食"
                         android:textSize="15dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:text="杯"
-                        android:textSize="15dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:text="杯"
-                        android:textSize="15dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:text="杯"
+                        android:text="食"
                         android:textSize="15dp" />
 
                     <TextView

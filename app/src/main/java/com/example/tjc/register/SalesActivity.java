@@ -31,7 +31,7 @@ public class SalesActivity extends AppCompatActivity {
         //TextViewを宣言
         TextView[] textViews = {(TextView)findViewById(R.id.textView),(TextView)findViewById(R.id.textView2),(TextView)findViewById(R.id.textView3),(TextView)findViewById(R.id.textView4),
                 (TextView)findViewById(R.id.textView5),(TextView)findViewById(R.id.textView6),(TextView)findViewById(R.id.textView7),(TextView)findViewById(R.id.textView8),(TextView)findViewById(R.id.textView9),
-                (TextView)findViewById(R.id.textView10),(TextView)findViewById(R.id.textView11),(TextView)findViewById(R.id.textView12),(TextView)findViewById(R.id.textView13),
+                (TextView)findViewById(R.id.textView10),(TextView)findViewById(R.id.textView11),
                 (TextView)findViewById(R.id.customer),(TextView)findViewById(R.id.engineer),(TextView)findViewById(R.id.discount)};
 
         //売り上げデータベースを読み込み
@@ -64,19 +64,17 @@ public class SalesActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 ContentValues values = new ContentValues();
-                values.put("HotCake", 0);
-                values.put("WHotCake", 0);
+                values.put("Hotdog", 0);
+                values.put("Tuna", 0);
+                values.put("Egg", 0);
+                values.put("Peach", 0);
+                values.put("Orange", 0);
+                values.put("ChocoBanana", 0);
                 values.put("HotCoffee", 0);
-                values.put("IceCoffeeS", 0);
-                values.put("IceCoffeeL", 0);
-                values.put("HotTea", 0);
-                values.put("IceTeaS", 0);
-                values.put("IceTeaL", 0);
-                values.put("HotGreenTea", 0);
-                values.put("OrangeS", 0);
-                values.put("OrangeL", 0);
-                values.put("ColaS", 0);
-                values.put("ColaL", 0);
+                values.put("IceCoffee", 0);
+                values.put("Milktea", 0);
+                values.put("Cola", 0);
+                values.put("Calpis", 0);
                 values.put("Registernum", 0);
                 values.put("Engineerstunum", 0);
                 values.put("DiscountTicket", 0);
