@@ -22,7 +22,7 @@ public class SalesActivity extends AppCompatActivity {
     private final static  String DB_TABLE = "sales";
     private SQLiteDatabase db;
     private final static int DB_VERSION = 1;
-    int[] sales = new int[16];
+    int[] sales = new int[17];
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -31,7 +31,7 @@ public class SalesActivity extends AppCompatActivity {
         //TextViewを宣言
         TextView[] textViews = {(TextView)findViewById(R.id.textView),(TextView)findViewById(R.id.textView2),(TextView)findViewById(R.id.textView3),(TextView)findViewById(R.id.textView4),
                 (TextView)findViewById(R.id.textView5),(TextView)findViewById(R.id.textView6),(TextView)findViewById(R.id.textView7),(TextView)findViewById(R.id.textView8),(TextView)findViewById(R.id.textView9),
-                (TextView)findViewById(R.id.textView10),(TextView)findViewById(R.id.textView11),
+                (TextView)findViewById(R.id.textView10),(TextView)findViewById(R.id.textView11),(TextView)findViewById(R.id.textView12),
                 (TextView)findViewById(R.id.customer),(TextView)findViewById(R.id.engineer),(TextView)findViewById(R.id.discount)};
 
         //売り上げデータベースを読み込み
@@ -69,6 +69,7 @@ public class SalesActivity extends AppCompatActivity {
                 values.put("Egg", 0);
                 values.put("Peach", 0);
                 values.put("Orange", 0);
+                values.put("Mix", 0);
                 values.put("ChocoBanana", 0);
                 values.put("HotCoffee", 0);
                 values.put("IceCoffee", 0);

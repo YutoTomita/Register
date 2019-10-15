@@ -18,7 +18,7 @@ public class CaliculateActivity extends AppCompatActivity {
     private final static String DB_NAME = "sales.db";
     private final static  String DB_TABLE = "sales";
     private SQLiteDatabase db;
-    private final static int DB_VERSION = 2;
+    private final static int DB_VERSION = 3;
     private int engineerstunum = 0, discountticket = 0;
     int total = 0;
     int engineer = 0;
@@ -36,8 +36,8 @@ public class CaliculateActivity extends AppCompatActivity {
         if (extras != null) total = extras.getInt("total");
         Cursor cursor = db.query(DB_TABLE, null, null, null, null, null, null);
         cursor.moveToFirst();
-        engineerstunum = cursor.getInt(12);
-        discountticket = cursor.getInt(13);
+        engineerstunum = cursor.getInt(13);
+        discountticket = cursor.getInt(14);
         TextView showtotal = (TextView)findViewById(R.id.Total);
         showtotal.setText(Integer.toString(total));
     }
@@ -150,7 +150,7 @@ public class CaliculateActivity extends AppCompatActivity {
         @Override
         public void onCreate(SQLiteDatabase db) {
             db.execSQL("create table if not exists " + DB_TABLE + "(" +
-                    "Hotdog integer,Tuna integer,Egg integer,Peach integer,Orange integer," +
+                    "Hotdog integer,Tuna integer,Egg integer,Peach integer,Orange integer,Mix integer," +
                     "ChocoBanana integer,HotCoffee integer,IceCoffee integer,Milktea integer,Cola integer," +
                     "Calpis integer,Registernum integer,Engineerstunum integer,DiscountTicket integer)");
         }

@@ -27,14 +27,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="￥   "
-                    android:textSize="40dp" />
+                    android:textSize="38dp" />
 
                 <TextView
                     android:id="@+id/Total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:textSize="40dp" />
+                    android:textSize="38dp" />
 
             </LinearLayout>
 
@@ -120,77 +120,84 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="ホットドッグ"
-                            android:textSize="30dp"/>
+                            android:textSize="38dp"/>
 
                         <RadioButton
                             android:id="@+id/menu2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="ツナサンド"
-                            android:textSize="30dp"/>
+                            android:textSize="38dp"/>
 
                         <RadioButton
                             android:id="@+id/menu3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="たまごサンド"
-                            android:textSize="30dp"/>
+                            android:textSize="38dp"/>
 
                         <RadioButton
                             android:id="@+id/menu4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="ピーチサンド"
-                            android:textSize="30dp"/>
+                            android:textSize="38dp"/>
 
                         <RadioButton
                             android:id="@+id/menu5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="みかんサンド"
-                            android:textSize="30dp"/>
+                            android:text="オレンジサンド"
+                            android:textSize="38dp"/>
 
                         <RadioButton
                             android:id="@+id/menu6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="チョコバナナサンド"
-                            android:textSize="30dp"/>
+                            android:text="フルーツミックスサンド"
+                            android:textSize="38dp"/>
 
                         <RadioButton
                             android:id="@+id/menu7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="ホットコーヒー"
-                            android:textSize="30dp"/>
+                            android:text="チョコバナナサンド"
+                            android:textSize="38dp"/>
 
                         <RadioButton
                             android:id="@+id/menu8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="アイスコーヒー"
-                            android:textSize="30dp"/>
+                            android:text="ホットコーヒー"
+                            android:textSize="38dp"/>
 
                         <RadioButton
                             android:id="@+id/menu9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="ミルクティー"
-                            android:textSize="30dp"/>
+                            android:text="アイスコーヒー"
+                            android:textSize="38dp"/>
 
                         <RadioButton
                             android:id="@+id/menu10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="コーラ"
-                            android:textSize="30dp"/>
+                            android:text="ミルクティー"
+                            android:textSize="38dp"/>
 
                         <RadioButton
                             android:id="@+id/menu11"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:text="コーラ"
+                            android:textSize="38dp"/>
+
+                        <RadioButton
+                            android:id="@+id/menu12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:text="カルピス"
-                            android:textSize="30dp"/>
+                            android:textSize="38dp"/>
 
                     </RadioGroup>
 
@@ -208,67 +215,73 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="×"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="×"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="×"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="×"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="×"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="×"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="×"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="×"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="×"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="×"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="×"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="×"
+                        android:textSize="38dp" />
 
                 </LinearLayout>
 
@@ -285,77 +298,84 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:id="@+id/num2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:id="@+id/num3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:id="@+id/num4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:id="@+id/num5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:id="@+id/num6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:id="@+id/num7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:id="@+id/num8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:id="@+id/num9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:id="@+id/num10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
 
                     <TextView
                         android:id="@+id/num11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:textSize="30dp" />
+                        android:textSize="38dp" />
+
+                    <TextView
+                        android:id="@+id/num12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="38dp" />
 
                 </LinearLayout>
 
